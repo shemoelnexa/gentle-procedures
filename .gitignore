@@ -1,0 +1,13 @@
+# Internal artefacts — not part of the shipped site
+previews/
+
+# Citadel CGI render — brief: never ship as website imagery
+assets/img/reception.png
+
+# Unused crop
+assets/img/hero-handA-port.jpg
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
