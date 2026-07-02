@@ -1,11 +1,9 @@
-# Internal artefacts — not part of the shipped site
+# Internal artefacts, not part of the shipped site
 previews/
 
-# Citadel CGI render — brief: never ship as website imagery
+# Raw Citadel CGI render. Never shipped as-is (brand rule). The sanitised, cropped
+# still derived from it, assets/img/clinic-arrival.jpg, IS tracked and shipped.
 assets/img/reception.png
-
-# Unused crop
-assets/img/hero-handA-port.jpg
 
 # OS junk
 .DS_Store
