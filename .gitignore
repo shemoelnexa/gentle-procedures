@@ -9,3 +9,6 @@ assets/img/reception.png
 .DS_Store
 Thumbs.db
 desktop.ini
+
+# local preview helper (not project code)
+_serve.js

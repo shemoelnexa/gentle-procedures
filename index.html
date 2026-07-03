@@ -26,7 +26,7 @@
   header .rule{height:1px;background:var(--pale-oak);margin-top:clamp(40px,6vh,66px);position:relative}
   header .rule::before{content:"";position:absolute;left:0;top:-1px;width:44px;height:3px;background:var(--navy)}
   main{padding-bottom:clamp(80px,14vh,160px)}
-  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(24px,2.6vw,44px)}
+  .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(24px,2.6vw,44px);max-width:1040px}
   .card{display:block;opacity:0;transform:translateY(22px);transition:opacity .8s var(--e),transform .8s var(--e)}
   .card.in{opacity:1;transform:none}
   .card .shot{aspect-ratio:16/10;overflow:hidden;border-radius:5px;background:var(--travertine);position:relative;box-shadow:0 30px 60px -42px rgba(28,43,69,.5)}
@@ -50,25 +50,13 @@
 
 <main class="wrap">
   <div class="grid">
-    <a class="card" href="concept-1.html" target="_blank" rel="noopener">
-      <div class="shot"><img src="assets/thumbs/c1.png" alt="Concept 1"></div>
-      <div class="meta"><span class="nm">Concept 1</span><span class="open">Open concept</span></div>
-    </a>
-    <a class="card" href="concept-2.html" target="_blank" rel="noopener">
-      <div class="shot"><img src="assets/thumbs/c2.png" alt="Concept 2"></div>
-      <div class="meta"><span class="nm">Concept 2</span><span class="open">Open concept</span></div>
-    </a>
-    <a class="card" href="concept-3.html" target="_blank" rel="noopener">
-      <div class="shot"><img src="assets/thumbs/c3.png" alt="Concept 3"></div>
-      <div class="meta"><span class="nm">Concept 3</span><span class="open">Open concept</span></div>
-    </a>
     <a class="card" href="concept-a.html" target="_blank" rel="noopener">
-      <div class="shot"><img src="assets/thumbs/a.png" alt="Concept 4"></div>
-      <div class="meta"><span class="nm">Concept 4</span><span class="open">Open concept</span></div>
+      <div class="shot"><img src="assets/thumbs/a.png" alt="The Threshold concept"></div>
+      <div class="meta"><span class="nm">The Threshold</span><span class="open">Open</span></div>
     </a>
-    <a class="card" href="concept-b.html" target="_blank" rel="noopener">
-      <div class="shot"><img src="assets/thumbs/b.png" alt="Concept 5"></div>
-      <div class="meta"><span class="nm">Concept 5</span><span class="open">Open concept</span></div>
+    <a class="card" href="concept-1.html" target="_blank" rel="noopener">
+      <div class="shot"><img src="assets/thumbs/c1.png" alt="The Register concept"></div>
+      <div class="meta"><span class="nm">The Register</span><span class="open">Open</span></div>
     </a>
   </div>
 </main>

@@ -99,26 +99,36 @@
   /* ============ HERO ============ */
   .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:120px var(--pad) clamp(40px,6vh,72px);overflow:hidden}
   .hero-band{position:absolute;top:0;left:0;right:0;height:46vh;z-index:0;overflow:hidden}
-  .hero-band img{width:100%;height:100%;object-fit:cover;object-position:center 40%;filter:brightness(.5) saturate(.9) contrast(1.02)}
-  .hero-band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,43,69,.5),rgba(28,43,69,.7) 55%,var(--navy) 100%)}
-  .hero-top{position:absolute;top:112px;left:var(--pad);right:var(--pad);z-index:3;display:flex;justify-content:space-between;color:var(--faint)}
+  .hero-band img{width:100%;height:100%;object-fit:cover;object-position:center 40%;filter:brightness(.74) saturate(.95) contrast(1.02)}
+  .hero-band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,43,69,.14),rgba(28,43,69,.34) 62%,var(--navy) 100%)}
+  .hero-top{display:none}
   .hero-inner{position:relative;z-index:3;max-width:var(--maxw);margin:0 auto;width:100%}
   .hero h1{margin:0}
-  .hero .l1{display:block;font-family:var(--grot);font-weight:800;text-transform:uppercase;font-size:clamp(3.2rem,13.5vw,13rem);line-height:.86;letter-spacing:-.02em;color:var(--alabaster)}
-  .hero .l2{display:block;font-family:var(--display);font-weight:300;font-style:italic;font-size:clamp(2rem,7.4vw,7rem);line-height:1;color:var(--first-light);margin-top:.06em;margin-left:.02em}
+  .hero .l1{display:block;font-family:var(--grot);font-weight:800;text-transform:uppercase;font-size:clamp(2.1rem,5.6vw,4.4rem);line-height:.94;letter-spacing:-.02em;color:var(--alabaster)}
+  .hero .l2{display:block;font-family:var(--display);font-weight:300;font-size:clamp(1.4rem,3vw,2.4rem);line-height:1.06;color:var(--first-light);margin-top:.16em;margin-left:.02em}
   .hero-cta{margin-top:clamp(34px,5vh,54px);display:flex;align-items:center;gap:26px;flex-wrap:wrap}
   .hero-scroll{font-family:var(--grot);font-weight:500;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--faint)}
   /* ============ BELIEF ============ */
   .belief{padding:clamp(120px,20vh,240px) 0}
   .belief .mono{margin-bottom:44px}
-  .belief .stmt{font-family:var(--display);font-weight:300;font-size:clamp(1.9rem,5vw,4.2rem);line-height:1.14;letter-spacing:-.01em;max-width:20ch}
-  .belief .stmt .dim{color:var(--faint)}
+  .belief .stmt{font-family:var(--display);font-weight:300;font-size:clamp(1.7rem,3.4vw,3rem);line-height:1.2;letter-spacing:-.01em;max-width:26ch}
+  .belief .stmt .dim{color:var(--paper)}
   .belief .stmt em{font-style:italic;color:var(--first-light)}
-  .belief .sub{margin-top:48px;max-width:40ch;color:var(--paper);font-size:1.06rem;line-height:1.7}
+  .belief .sub{margin-top:40px;max-width:66ch;color:var(--paper);font-size:1.06rem;line-height:1.7}
   .belief .sub b{font-family:var(--display);font-weight:400;font-style:normal}
+  /* ============ TRUST (who we are / what we provide) ============ */
+  .trust{padding:clamp(90px,14vh,170px) 0;border-top:1px solid var(--hair)}
+  .trust .tgrid{display:grid;grid-template-columns:minmax(0,4.6fr) minmax(0,7fr);gap:clamp(40px,6vw,96px);align-items:start}
+  .trust .lead{font-family:var(--display);font-weight:300;font-size:clamp(1.6rem,3vw,2.5rem);line-height:1.22;max-width:16ch}
+  .trust .intro{margin-top:22px;max-width:42ch;color:var(--paper);font-size:1.02rem}
+  .tledger{border-top:1px solid var(--hair)}
+  .tledger .row2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.5fr);gap:clamp(20px,3vw,52px);padding:clamp(22px,3.2vh,34px) 0;border-bottom:1px solid var(--hair);align-items:baseline}
+  .tledger .cn{font-family:var(--display);font-weight:400;font-size:clamp(1.2rem,1.6vw,1.5rem);line-height:1.15;color:var(--alabaster)}
+  .tledger .cd{color:var(--paper);font-size:.98rem;line-height:1.62}
+  @media(max-width:860px){.trust .tgrid{grid-template-columns:1fr;gap:44px}.tledger .row2{grid-template-columns:1fr;gap:8px;padding:24px 0}}
   /* ============ full-bleed brand band ============ */
   .band{position:relative;height:clamp(320px,52vh,560px);overflow:hidden;border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
-  .band img{width:100%;height:100%;object-fit:cover;object-position:center 62%}
+  .band img{width:100%;height:100%;object-fit:cover;object-position:center 42%}
   .band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,43,69,.28),rgba(28,43,69,.12))}
   .band .cap{position:absolute;left:var(--pad);bottom:26px;z-index:2}
   .band .cap .mono{color:var(--paper)}
@@ -162,6 +172,7 @@
   .row .no{font-family:var(--display);font-style:italic;font-size:1.1rem;color:var(--faint)}
   .row .lead{font-family:var(--display);font-weight:400;font-size:clamp(1.4rem,2.6vw,2.2rem);line-height:1.12;letter-spacing:-.01em}
   .row .body{color:var(--paper);font-size:1rem;line-height:1.65;max-width:46ch}
+  .row.wide .lead{grid-column:2 / span 2;max-width:30ch}
   .row .rl{font-family:var(--grot);font-weight:600;font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--paper);white-space:nowrap;display:inline-flex;align-items:center;gap:.5em;border-bottom:1px solid var(--hair);padding-bottom:5px;transition:border-color .3s,color .3s}
   .row .rl .ar{width:1.4em;height:.55em;background:currentColor;-webkit-mask:var(--arrowm) no-repeat center/contain;mask:var(--arrowm) no-repeat center/contain;transition:transform .35s}
   .row:hover .rl{color:var(--alabaster);border-color:var(--paper)}.row:hover .rl .ar{transform:translateX(5px)}
@@ -208,8 +219,8 @@
     .glimpse h2,.glimpse .head p{grid-column:1}
     .ggrid{grid-template-columns:1fr;gap:16px}
     .gcell.c1,.gcell.c2,.gcell.c3,.gcell.c4{grid-column:1;height:clamp(240px,64vw,380px)}
-    .hero .l1{font-size:clamp(2rem,11vw,3.6rem)}
-    .hero .l2{font-size:clamp(1.6rem,7vw,2.6rem)}
+    .hero .l1{font-size:clamp(2rem,10vw,3.2rem)}
+    .hero .l2{font-size:clamp(1.4rem,6vw,2.2rem)}
     .hero-top{display:none}
     .screen{aspect-ratio:16/10}
     .fgrid{grid-template-columns:1fr}
@@ -224,6 +235,43 @@
   /* press feedback */
   .cta:active{transform:translateY(0) scale(.96)}
   .door.show:active{transform:scale(.95)}
+  /* ===== review pass: uniform headings, redesigned §5 / §6 / footer ===== */
+  /* belief: two-column with image */
+  .belief .bgrid{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,.88fr);gap:clamp(40px,6vw,96px);align-items:center}
+  .belief .stmt{max-width:24ch}
+  .bmedia{position:relative;overflow:hidden;border-radius:3px;aspect-ratio:4/5;box-shadow:0 44px 90px -54px rgba(0,0,0,.7)}
+  .bmedia img{width:100%;height:100%;object-fit:cover}
+  @media(max-width:860px){.belief .bgrid{grid-template-columns:1fr;gap:40px}.bmedia{max-width:440px}}
+  .glimpse h2,.reg h2,.invite h2{font-size:clamp(1.8rem,3.8vw,3.2rem);line-height:1.04}
+  .invite h2{max-width:18ch}
+  /* §5 centered editorial stack */
+  .reg .rh{display:block;text-align:center;margin-bottom:clamp(48px,7vh,84px)}
+  .reg .rh .mono{text-align:center;max-width:none;margin:0}
+  .reg h2{margin:14px auto 0;max-width:22ch}
+  .reg .rhsub{color:var(--paper);font-size:1.02rem;max-width:46ch;margin:20px auto 0}
+  .reg .rows{max-width:780px;margin:0 auto}
+  .row{display:block!important;text-align:center;padding:clamp(34px,5vh,58px) 0;transition:none}
+  .row:hover{transform:none}
+  .row .no{display:block;font-family:var(--display);font-size:.9rem;letter-spacing:.05em;color:var(--faint);margin-bottom:14px}
+  .row .lead{display:block;font-size:clamp(1.45rem,2.5vw,2.1rem);max-width:26ch;margin:0 auto;letter-spacing:-.01em}
+  .row .body{display:block;max-width:52ch;margin:14px auto 0}
+  .row .rl{margin-top:20px}
+  /* §6 standard: left-aligned spec sheet */
+  .standard{text-align:left}
+  .standard .mono{text-align:left;margin-bottom:clamp(38px,5.5vh,60px)}
+  .stdlist{max-width:1000px;margin:0 auto;border-top:1px solid var(--hair)}
+  .stdrow{display:grid;grid-template-columns:60px 1fr;gap:clamp(20px,3vw,48px);align-items:baseline;padding:clamp(26px,3.6vh,40px) 0;border-bottom:1px solid var(--hair)}
+  .stdrow .si{font-family:var(--display);font-size:1.05rem;color:var(--faint)}
+  .stdrow .st{font-family:var(--display);font-weight:300;font-size:clamp(1.25rem,2.1vw,1.8rem);line-height:1.34;color:var(--alabaster);max-width:44ch}
+  @media(max-width:640px){.stdrow{grid-template-columns:38px 1fr;gap:14px}}
+  /* footer redesign: top tagline band + CTA, then columns */
+  footer .ftop{display:flex;justify-content:space-between;align-items:center;gap:28px;flex-wrap:wrap;padding-bottom:clamp(40px,6vh,60px);margin-bottom:clamp(48px,7vh,72px);border-bottom:1px solid var(--hair)}
+  footer .ftop .ftag{font-family:var(--display);font-weight:300;font-size:clamp(1.6rem,3.2vw,2.7rem);color:var(--alabaster);margin:0}
+  footer .fgrid{grid-template-columns:1.6fr repeat(4,1fr)}
+  footer .fbrand .addr{margin-top:18px}
+  @media(max-width:900px){footer .ftop{flex-direction:column;align-items:flex-start;gap:20px}}
+  /* brand direction: no italic type anywhere */
+  *{font-style:normal!important}
   @media(prefers-reduced-motion:reduce){
     *{animation:none!important;transition:none!important}
     html.js [data-r]{opacity:1!important;transform:none!important}
@@ -277,16 +325,32 @@
 </section>
 
 <!-- BELIEF -->
-<section class="belief wrap" aria-labelledby="belief-h">
-  <p class="mono" data-r>01 . The belief</p>
-  <h2 class="stmt" id="belief-h" data-r>Thirty years ago, one surgeon set out to prove a single idea: <span class="dim">that this could be</span> <em>virtually painless, virtually bloodless, and genuinely gentle.</em></h2>
-  <p class="sub" data-r>Well over <b>[200,000]</b> families later, that idea has come home to Dubai.</p>
+<section class="belief" aria-labelledby="belief-h">
+  <div class="wrap bgrid">
+    <div class="btext">
+      <p class="mono" data-r>01 . The belief</p>
+      <h2 class="stmt" id="belief-h" data-r>Thirty years ago, one surgeon set out to prove a single idea: <span class="dim">that this could be</span> virtually painless, virtually bloodless, and genuinely gentle.</h2>
+      <p class="sub" data-r>Well over <b>200,000</b> families later, that idea has come home to Dubai.</p>
+    </div>
+    <figure class="bmedia" data-clip><img src="assets/img/homeA.jpg" alt="A newborn sleeping peacefully at home"></figure>
+  </div>
 </section>
 
-<!-- BRAND BAND (real clinic) -->
-<section class="band" data-clip aria-label="Inside the clinic">
-  <img src="assets/img/clinic-reception.jpg" alt="The reception at Gentle Procedures Dubai, warm travertine and crystal light">
-  <div class="cap"><span class="mono">Al Wasl Road, Dubai</span></div>
+<!-- TRUST: who we are / what we provide -->
+<section class="trust wrap" aria-labelledby="trust-h">
+  <div class="tgrid">
+    <div class="tintro">
+      <p class="mono" data-r>Why families trust us</p>
+      <h2 class="lead" id="trust-h" data-r style="margin-top:30px">Gentle newborn circumcision, and you beside him the whole time.</h2>
+      <p class="intro" data-r>A calm, unhurried home for your son's care in Dubai, in the hands of people who do this every day.</p>
+    </div>
+    <div class="tledger">
+      <div class="row2" data-r><div class="cn">The Pollock Group</div><div class="cd">Our first international clinic, thirty years and well over 200,000 families in the making.</div></div>
+      <div class="row2" data-r><div class="cn">Dubai Health Authority</div><div class="cd">Licensed to its highest day-surgery standard, and designed so you would never know it.</div></div>
+      <div class="row2" data-r><div class="cn">Four continents</div><div class="cd">The peer-reviewed gentle technique, trusted by families around the world.</div></div>
+      <div class="row2" data-r><div class="cn">A human, on the line</div><div class="cd">Clear aftercare and a direct line to our team. A human answers, quickly in the day and kindly always.</div></div>
+    </div>
+  </div>
 </section>
 
 <!-- GLIMPSE -->
@@ -320,13 +384,14 @@
 <!-- REGISTER (§5 What the day holds) -->
 <section class="reg wrap" aria-labelledby="reg-h">
   <div class="rh">
-    <h2 id="reg-h" data-r>What the day<br>actually holds</h2>
-    <p class="mono" data-r>Five quiet promises. Everything else, one message away.</p>
+    <p class="mono" data-r>What the day holds</p>
+    <h2 id="reg-h" data-r>What the day actually holds</h2>
+    <p class="rhsub" data-r>Five quiet promises. Everything else is one message away.</p>
   </div>
   <div class="rows">
     <div class="row" data-r><span class="no">01</span><h3 class="lead">You stay close.</h3><p class="body">Your son is most at peace when you are near, so you hold him, skin to skin, throughout.</p><a class="rl" href="/questions-answered/the-day">Read about staying close <span class="ar" aria-hidden="true"></span></a></div>
     <div class="row" data-r><span class="no">02</span><h3 class="lead">Comfort comes first, always.</h3><p class="body">The gentle anaesthetic is given its full time to take effect. Nothing is rushed for our convenience.</p><a class="rl" href="/questions-answered/comfort-and-pain">Read about comfort and pain relief <span class="ar" aria-hidden="true"></span></a></div>
-    <div class="row" data-r><span class="no">03</span><h3 class="lead">The moment itself is brief. The calm around it is everything.</h3><p class="body"></p><a class="rl" href="/questions-answered/the-day">Read what the day looks like <span class="ar" aria-hidden="true"></span></a></div>
+    <div class="row wide" data-r><span class="no">03</span><h3 class="lead">The moment itself is brief. The calm around it is everything.</h3><a class="rl" href="/questions-answered/the-day">Read what the day looks like <span class="ar" aria-hidden="true"></span></a></div>
     <div class="row" data-r><span class="no">04</span><h3 class="lead">You are never left guessing.</h3><p class="body">Clear aftercare you can actually follow at 3am, and a direct line to our team. A human answers, quickly in the day and kindly always.</p><a class="rl" href="/questions-answered/aftercare-and-healing">Read about the first days at home <span class="ar" aria-hidden="true"></span></a></div>
     <div class="row" data-r><span class="no">05</span><h3 class="lead">A cherished moment, treated as one.</h3><p class="body">For many of our families this is a meaningful rite, rich with faith and love. It deserves to be held that way, and it is.</p><a class="rl" href="/questions-answered/faith-and-the-rite">Read more <span class="ar" aria-hidden="true"></span></a></div>
   </div>
@@ -334,11 +399,13 @@
 
 <!-- STANDARD -->
 <section class="standard wrap" aria-labelledby="std-h">
-  <p class="mono" data-r>06 . The standard, in one breath</p>
-  <h2 class="ln" id="std-h" data-r>The first international clinic of The Pollock Group.</h2>
-  <p class="ln" data-r>Licensed by the Dubai Health Authority to its highest day-surgery standard, <span class="dim">and designed so you would never know it.</span></p>
-  <p class="ln" data-r>The peer-reviewed gentle technique, trusted by families on four continents.</p>
-  <p class="ln" data-r>In the care of an internationally trained Consultant Neonatal and Paediatric Surgeon, personally certified in the Pollock Technique by Dr. Pollock himself.</p>
+  <p class="mono" id="std-h" data-r>The standard, in one breath</p>
+  <div class="stdlist">
+    <div class="stdrow" data-r><span class="si">I</span><p class="st">The first international clinic of The Pollock Group.</p></div>
+    <div class="stdrow" data-r><span class="si">II</span><p class="st">Licensed by the Dubai Health Authority to its highest day-surgery standard, and designed so you would never know it.</p></div>
+    <div class="stdrow" data-r><span class="si">III</span><p class="st">The peer-reviewed gentle technique, trusted by families on four continents.</p></div>
+    <div class="stdrow" data-r><span class="si">IV</span><p class="st">In the care of an internationally trained Consultant Neonatal and Paediatric Surgeon, personally certified in the Pollock Technique by Dr. Pollock himself.</p></div>
+  </div>
 </section>
 
 <!-- ONE VOICE -->
@@ -364,11 +431,16 @@
 
 <!-- FOOTER -->
 <footer aria-label="Footer">
+  <div class="wrap">
+    <div class="ftop">
+      <p class="ftag">Exceptional care, delivered gently.</p>
+      <a class="cta lg" href="/speak-with-our-team">Speak with our team</a>
+    </div>
+  </div>
   <div class="fgrid wrap">
     <div class="fbrand">
       <div class="fw">Gentle Procedures Dubai</div>
       <div class="grp">The Pollock Group</div>
-      <div class="ftag">Exceptional care, delivered gently.</div>
       <div class="addr">Shop 7, Al Ferdous Building 3, Al Wasl Road, Al Safa 1, Dubai<br>DHA Licence No. [to confirm]</div>
     </div>
     <div class="fcol"><h3>The Clinic</h3><a href="/our-story">Our Story</a><a href="/the-gentle-approach">The Gentle Approach</a><a href="/trust">Trust and Peace of Mind</a><a href="/visiting-us">Visiting Us</a></div>

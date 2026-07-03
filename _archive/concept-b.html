@@ -113,7 +113,8 @@
   html.js .media-rv{clip-path:inset(100% 0 0 0)}
   html.js .media-rv>img{transform:scale(1.16)}
   /* signature marker: thin rule with a single accent tick (warm-neutral, never teal) */
-  .tick{display:block; width:72px; height:1px; background:var(--pale-oak); position:relative; margin-bottom:36px}
+  .tick{display:none}
+  .tick-x{display:block; width:72px; height:1px; background:var(--pale-oak); position:relative; margin-bottom:36px}
   .tick::before{content:""; position:absolute; left:0; top:-1px; width:22px; height:3px; background:var(--navy)}
   .tick.c{margin-left:auto;margin-right:auto}
   .tick.on-dark{background:rgba(247,244,239,.25)} .tick.on-dark::before{background:var(--first-light)}
@@ -197,7 +198,18 @@
   /* belief */
   .belief{text-align:center}
   .belief .lead{font-family:var(--display); font-weight:300; font-size:clamp(1.9rem,4vw,3.3rem); line-height:1.26; max-width:19ch; margin:0 auto}
-  .belief .sub{margin-top:36px; color:var(--muted); font-size:1.06rem; max-width:44ch; margin-left:auto; margin-right:auto}
+  .belief .lead em{font-style:normal}
+  .belief .sub{margin-top:36px; color:var(--muted); font-size:1.06rem; max-width:66ch; margin-left:auto; margin-right:auto}
+  /* trust: who we are / what we provide */
+  .trust .head{max-width:640px; margin-bottom:clamp(46px,7vh,80px)}
+  .trust h2{font-family:var(--display); font-weight:300; font-size:clamp(1.8rem,3.6vw,2.8rem); line-height:1.2; margin-bottom:22px}
+  .trust h2 em{font-style:italic; color:var(--navy)}
+  .trust .head p{color:var(--muted); max-width:56ch}
+  .creds{display:grid; grid-template-columns:repeat(4,1fr); gap:clamp(28px,3vw,54px); border-top:1px solid var(--pale-oak); padding-top:clamp(36px,5vh,56px)}
+  .cred .cn{font-family:var(--display); font-weight:400; font-size:1.22rem; line-height:1.2; margin-bottom:12px}
+  .cred p{color:var(--muted); font-size:.96rem; line-height:1.6}
+  @media(max-width:880px){.creds{grid-template-columns:1fr 1fr; gap:34px 40px}}
+  @media(max-width:520px){.creds{grid-template-columns:1fr}}
   /* glimpse */
   .glimpse .head{max-width:620px; margin-bottom:clamp(52px,8vh,92px)}
   .glimpse h2{font-family:var(--display); font-weight:300; font-size:clamp(2rem,4.2vw,3.2rem); line-height:1.18; margin-bottom:26px}
@@ -348,7 +360,27 @@
       <span class="line"><span><em>virtually painless, virtually bloodless,</em></span></span>
       <span class="line"><span><em>and genuinely gentle.</em></span></span>
     </h2>
-    <p class="sub" data-fade>Well over [200,000] families later, that idea has come home to Dubai.</p>
+    <p class="sub" data-fade>Well over 200,000 families later, that idea has come home to Dubai.</p>
+  </div>
+</section>
+
+<!-- Why Families Trust Us: who we are / what we provide -->
+<section class="trust bg-alabaster pad" aria-labelledby="trust-h">
+  <div class="wrap">
+    <div class="head">
+      <span class="tick" data-fade></span>
+      <h2 class="display lines" id="trust-h">
+        <span class="line"><span>Gentle newborn circumcision,</span></span>
+        <span class="line"><span><em>and you beside him the whole time.</em></span></span>
+      </h2>
+      <p data-fade>A calm, unhurried home for your son's care in Dubai, in the hands of people who do this every day.</p>
+    </div>
+    <div class="creds">
+      <div class="cred" data-fade><div class="cn display">The Pollock Group</div><p>Our first international clinic, thirty years and well over 200,000 families in the making.</p></div>
+      <div class="cred" data-fade><div class="cn display">Dubai Health Authority</div><p>Licensed to its highest day-surgery standard, and designed so you would never know it.</p></div>
+      <div class="cred" data-fade><div class="cn display">Four continents</div><p>The peer-reviewed gentle technique, trusted by families around the world.</p></div>
+      <div class="cred" data-fade><div class="cn display">A human, on the line</div><p>Clear aftercare and a direct line to our team. A human answers, quickly in the day and kindly always.</p></div>
+    </div>
   </div>
 </section>
 
