@@ -98,9 +98,9 @@
   #menu .mfoot{position:absolute;bottom:26px;left:var(--pad);right:var(--pad);display:flex;justify-content:space-between}
   /* ============ HERO ============ */
   .hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;padding:120px var(--pad) clamp(40px,6vh,72px);overflow:hidden}
-  .hero-band{position:absolute;top:0;left:0;right:0;height:46vh;z-index:0;overflow:hidden}
-  .hero-band img{width:100%;height:100%;object-fit:cover;object-position:center 40%;filter:brightness(.74) saturate(.95) contrast(1.02)}
-  .hero-band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,43,69,.14),rgba(28,43,69,.34) 62%,var(--navy) 100%)}
+  .hero-band{position:absolute;inset:0;z-index:0;overflow:hidden}
+  .hero-band img{width:100%;height:100%;object-fit:cover;object-position:center 42%;filter:brightness(.82) saturate(.95) contrast(1.02)}
+  .hero-band::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(28,43,69,.34) 0%,rgba(28,43,69,.12) 24%,rgba(28,43,69,.2) 46%,rgba(28,43,69,.5) 68%,rgba(28,43,69,.82) 88%,rgba(28,43,69,.94) 100%)}
   .hero-top{display:none}
   .hero-inner{position:relative;z-index:3;max-width:var(--maxw);margin:0 auto;width:100%}
   .hero h1{margin:0}
